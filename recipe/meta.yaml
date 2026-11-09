@@ -23,7 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - aenum
-    - astropy-base
+    - astropy-base >=5.3.3
     - astroquery
     - fastavro
     - python-hdfs
@@ -32,7 +32,7 @@ requirements:
     - packaging
     - pandas >=1.5.0
     - scipy
-    - tqdm >=4.64.0
+    - tqdm >=4.66.3
 
 test:
   imports:
