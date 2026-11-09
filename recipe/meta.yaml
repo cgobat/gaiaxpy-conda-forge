@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.8
     - aenum
-    - astropy
+    - astropy-base
     - astroquery
     - fastavro
     - python-hdfs
