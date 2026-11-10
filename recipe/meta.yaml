@@ -1,5 +1,6 @@
 {% set name = "gaiaxpy" %}
 {% set version = "2.1.5" %}
+{% set readme = load_file_regex("README.md", "(?s).*") %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +13,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -46,6 +47,7 @@ test:
 about:
   home: https://gaia-dpci.github.io/GaiaXPy-website/
   summary: GaiaXPy is a Python library to facilitate handling Gaia BP/RP spectra as distributed from the Gaia archive.
+  description: {{ (readme.group(0) if readme else "") | tojson }}
   license: 'BSD-3-Clause'
   license_file: LICENSE
 
