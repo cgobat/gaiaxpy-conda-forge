@@ -1,6 +1,6 @@
 {% set name = "gaiaxpy" %}
 {% set version = "2.1.5" %}
-{% set readme = load_file_regex("README.md", "(?s).*") %}
+{% set readme = load_file_regex(load_file="README.md", regex_pattern="(?s).*") %}
 
 package:
   name: {{ name|lower }}
